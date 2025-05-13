@@ -34,9 +34,9 @@ pipeline {
                 script {
                     // Push Docker image to EC2 instance
                     bat """
-                    docker save %DOCKER_IMAGE% | bzip2 | plink -i E:\PWSkills\AWS\\ec2key.pem %STAGING_SERVER% "bunzip2 | docker load"
-                    plink -i E:\PWSkills\AWS\\ec2key.pem %STAGING_SERVER% "docker stop my-app || true"
-                    plink -i E:\PWSkills\AWS\\ec2key.pem %STAGING_SERVER% "docker run -d -p 80:3000 --name my-app %DOCKER_IMAGE%"
+                    docker save %DOCKER_IMAGE% | bzip2 | plink -i E:\\PWSkills\\AWS\\ec2key.pem %STAGING_SERVER% "bunzip2 | docker load"
+                    plink -i E:\\PWSkills\\AWS\\ec2key.pem %STAGING_SERVER% "docker stop my-app || true"
+                    plink -i E:\\PWSkills\\AWS\\ec2key.pem %STAGING_SERVER% "docker run -d -p 80:3000 --name my-app %DOCKER_IMAGE%"
                     """
                 }
             }
