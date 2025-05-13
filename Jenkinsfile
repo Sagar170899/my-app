@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "my-app"
-        STAGING_SERVER = "ec2-user@<AWS-EC2-IP>"
+        STAGING_SERVER = "ec2-user@54.221.7.93"
     }
 
     stages {
